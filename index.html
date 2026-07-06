@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 CGPA Calculator</h1>
+    <p class="subtitle">Calculate your Semester GPA, Updated CGPA and Future CGPA</p>
+
+    <!-- Current Details -->
+
+    <div class="card">
+
+        <h2>Current Academic Details</h2>
+
+        <div class="row">
+
+            <div class="input-group">
+                <label>Current CGPA</label>
+                <input
+                    type="number"
+                    id="currentCGPA"
+                    placeholder="Eg: 8.25"
+                    step="0.01"
+                    min="0"
+                    max="10"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Completed Credits</label>
+                <input
+                    type="number"
+                    id="completedCredits"
+                    placeholder="Eg: 72"
+                    min="0"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Subjects -->
+
+    <div class="card">
+
+        <div class="heading">
+
+            <h2>Semester Subjects</h2>
+
+            <button type="button" id="addSubjectBtn">
+                + Add Subject
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Subject</th>
+                    <th>Credits</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="subjectTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+        <button type="button" id="calculateBtn">
+            Calculate GPA
+        </button>
+
+        <button type="button" id="resetBtn">
+            Reset
+        </button>
+
+    </div>
+
+    <!-- Results -->
+
+    <div class="card results">
+
+        <h2>Results</h2>
+
+        <div class="result-box">
+
+            <div>
+
+                <h3>Semester GPA</h3>
+
+                <p id="semesterGPA">
+                    0.00
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Updated CGPA</h3>
+
+                <p id="updatedCGPA">
+                    0.00
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- What If -->
+
+    <div class="card">
+
+        <h2>🔮 What If Mode</h2>
+
+        <p class="whatif-text">
+            Predict your CGPA based on your expected GPA next semester.
+        </p>
+
+        <div class="row">
+
+            <div class="input-group">
+
+                <label>Future Semester Credits</label>
+
+                <input
+                    type="number"
+                    id="futureCredits"
+                    placeholder="Eg: 24"
+                >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Expected GPA</label>
+
+                <input
+                    type="number"
+                    id="expectedGPA"
+                    placeholder="Eg: 9.2"
+                    step="0.01"
+                    min="0"
+                    max="10"
+                >
+
+            </div>
+
+        </div>
+
+        <button type="button" id="predictBtn">
+            Predict CGPA
+        </button>
+
+        <div class="prediction">
+
+            <h3>Projected CGPA</h3>
+
+            <p id="projectedCGPA">
+                0.00
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
